@@ -1,0 +1,8 @@
+Some basic rules to simplify the BigO notations
+Ignore constants O(2n)  = O(n)
+O(500) = O(1)
+O(13n^2)  = O(n^2)
+O(10n + 2)  = O(n)
+O(10n^2 + 5n +2) = O(n^2)
+
+Arithmetic operations are constant time
