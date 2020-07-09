@@ -7,6 +7,8 @@
  * So when we speak of Time complexity, measuring in terms of the ms needed to get a thing done isn't really the best way to figure out which one is better or worse
  * since the amount of time a code takes to run varies even on the same machine, so we need a better, more precise way to doing this
  * So we can simple count the number of operations the computer executes to get a thing done.
+ * 
+ * BIG O is the worst case scenarios ie it is describing the upper bound.
  
  
  */
