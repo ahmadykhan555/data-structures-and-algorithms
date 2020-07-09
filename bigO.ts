@@ -25,6 +25,13 @@ const addUpToUsingFor = n => {
   return total;
 };
 const addUpToUsingFormula = n => {
+  /**
+   * Here we have 3 operations irrespective of the value of n
+   * 1. Multiplication
+   * 2. Addition
+   * 3. Division
+   * So it doesn't depend on n and we can safely say it runs in a constant time or Order of 1 ie constant
+   */
   return (n * (n + 1)) / 2;
 };
 
