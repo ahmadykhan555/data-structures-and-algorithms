@@ -64,5 +64,10 @@ the newArray variable grows to infinity if the input size reaches infinity which
 - Very fast in most cases O(1)
 - Adding, deleting or updating a value is done in constant time O(1)
 - Searching for a value in the object is linear time O(1)
-- Object methods like `Object.keys(myObj)`, `Object.values(myObj)`, `Object.entries(myObj)` are linear time O(1)
-- `Object.hasOwnProperty` just checks if a key exists and thus is O(1)
+
+| Method                       | Complexity |
+| ---------------------------- | ---------- |
+| `Object.keys(myObj)`         | O(n)       |
+| `Object.values(myObj)`       | O(n)       |
+| `Object.entries(myObj)`      | O(n)       |
+| `Object.hasOwnProperty(key)` | O(1)       |
