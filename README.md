@@ -55,3 +55,14 @@ Variables:
 2. variable i (primitive type)
 
 the newArray variable grows to infinity if the input size reaches infinity which means the space this variable will take is directly proportional to the input size of O(n)
+
+### Analyze Javascript Arrays & Objects Time Complexity
+
+**Objects**
+
+- Unordered data (order doesn't matter)
+- Very fast in most cases O(1)
+- Adding, deleting or updating a value is done in constant time O(1)
+- Searching for a value in the object is linear time O(1)
+- Object methods like `Object.keys(myObj)`, `Object.values(myObj)`, `Object.entries(myObj)` are linear time O(1)
+- `Object.hasOwnProperty` just checks if a key exists and thus is O(1)
