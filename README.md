@@ -60,10 +60,9 @@ the newArray variable grows to infinity if the input size reaches infinity which
 
 **Objects**
 
+- key value pairs
 - Unordered data (order doesn't matter)
 - Very fast in most cases O(1)
-- Adding, deleting or updating a value is done in constant time O(1)
-- Searching for a value in the object is linear time O(1)
 
 | Method                       | Complexity |
 | ---------------------------- | ---------- |
@@ -71,3 +70,7 @@ the newArray variable grows to infinity if the input size reaches infinity which
 | `Object.values(myObj)`       | O(n)       |
 | `Object.entries(myObj)`      | O(n)       |
 | `Object.hasOwnProperty(key)` | O(1)       |
+| Searching                    | O(n)       |
+| Addition                     | O(1)       |
+| Removal                      | O(1)       |
+| Update                       | O(1)       |
