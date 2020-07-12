@@ -17,3 +17,41 @@ Some basic rules (for Javascript)
 1. Primitive data types (boolean, number, undefined, null) take constant space
 2. Strings take space directly proportional to the size of the value stores so roughly O(n)
 3. Reference types (arrays, objects) take space directly proportional to the length or number of keys respectively that it holds
+
+An example to analyze space complexity of an algorithm:
+
+```javascript
+function sum(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+```
+
+Variables:
+
+1. we always create a variable total (primitive type)
+2. we always create a variable i (primitive type)
+
+These variable don't depend on the input `arr` size. Thus the space complexity of this algorithm will always be constant or O(1)
+
+Lets look at another algorithm:
+
+```javascript
+function double(arr) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(2 * arr[i]);
+  }
+  return newArray;
+}
+```
+
+Variables:
+
+1. newArray (reference type)
+2. variable i (primitive type)
+
+the newArray variable grows to infinity if the input size reaches infinity which means the space this variable will take is directly proportional to the input size of O(n)
