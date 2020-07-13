@@ -27,3 +27,11 @@
   1. The inputs `num1`, `num2`
   2. The output `product`
   3. The format `integer`, `float` `string`...
+
+### Explore concrete examples
+
+### Break it down
+
+### Solve/simplify
+
+### Refactor/Improve
