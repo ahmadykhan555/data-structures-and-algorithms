@@ -76,3 +76,31 @@ the newArray variable grows to infinity if the input size reaches infinity which
 | Addition                     | O(1)       | Since we don't have to worry about the order so its constant time                                                        |
 | Removal                      | O(1)       | Since order isn't important so we can delete any key value pair in constant time provided the key                        |
 | Update                       | O(1)       | Since we can update any key value pair provided the key                                                                  |
+
+**Arrays**
+
+- Ordered list (default ordered by indexes)
+- Used where need order
+- Anything that may require array re-indexing will result in at least linear time complexity ie O(n)
+
+[Code reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/arrayMethods.ts)
+
+| Method     | usage                                                                                                              | Complexity   | Reason                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------------------------------------------------------- |
+| `.push`    | Add something to the end of array                                                                                  | O(1)         | no re-indexing required                                          |
+| `.pop`     | Remove the last element of an array                                                                                | O(1)         | no re-indexing required                                          |
+| `.unshift` | Add something to the beginning of an array                                                                         | O(n)         | requires re-indexing                                             |
+| `.shift`   | Remove the very first element of the array at index 0                                                              | O(n)         | requires re-indexing                                             |
+| `.concat`  | Merges to array to make a new one                                                                                  | O(n)         | grows as the size of arrays being merged grows so roughly O(n+m) |
+| `.slice`   | returns a sub-array of the original array, we mention the copy/subset size                                         | O(n)         | can copy at-most the full array                                  |
+| `.splice`  | multipurpose, can be used to copy sub-array, remove something, add something etc                                   | O(n)         | can copy/operate at-most the full array                          |
+| `.sort`    | orders the array, we can customize the ordering logic                                                              | O(n)         | loops each element                                               |
+| `.forEach` | loops each element of the array                                                                                    | O(n)         | loops each element                                               |
+| `.filter`  | - returns a new array with elements passing a certain condition                                                    | O(n)         | loops each element                                               |
+| `.map`     | - can modify the array if we need and returns the modified array in the form of a new array                        | O(n)         | loops each element                                               |
+| `.reduce`  | - can perform a function on each, similar to the other array methods with the peculiarity of having an accumulator | O(n)         | loops each element                                               |
+| Accessing  | get value at a specified index                                                                                     | O(1)         | can reach any index in constant time                             |
+| Searching  | look for a value in the array                                                                                      | O(n)         | potentially needs to check each item in the array                |
+| Addition   | add to the array                                                                                                   | O(1) or O(n) | O(1) only if added to the end of array                           |
+| Removal    | delete from the array                                                                                              | O(1) or O(n) | O(1) only if removed from the end of array                       |
+| Update     | update value at a certain index                                                                                    | O(1)         | can reach any index in constant time                             |
