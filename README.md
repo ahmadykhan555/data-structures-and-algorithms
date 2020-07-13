@@ -64,13 +64,13 @@ the newArray variable grows to infinity if the input size reaches infinity which
 - Unordered data (order doesn't matter)
 - Very fast in most cases O(1)
 
-| Method                       | Complexity |
-| ---------------------------- | ---------- |
-| `Object.keys(myObj)`         | O(n)       |
-| `Object.values(myObj)`       | O(n)       |
-| `Object.entries(myObj)`      | O(n)       |
-| `Object.hasOwnProperty(key)` | O(1)       |
-| Searching                    | O(n)       |
-| Addition                     | O(1)       |
-| Removal                      | O(1)       |
-| Update                       | O(1)       |
+| Method                       | Complexity | Reason                                                                                                                   |
+| ---------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `Object.keys(myObj)`         | O(n)       | Since this pushes all keys into a new Array `[key1, key2, ...]`                                                          |
+| `Object.values(myObj)`       | O(n)       | Since this pushed all values for each key into a new Array `[value1, value2, ...]`                                       |
+| `Object.entries(myObj)`      | O(n)       | Since this pushes all key-value pairs into a new Array `[[key1, value1], [key2, value2], [...]]`                         |
+| `Object.hasOwnProperty(key)` | O(1)       | Since this just checks for a particular key in an object and returns a null so its constant time                         |
+| Searching                    | O(n)       | Since to search a particular value without knowledge of the key we essentially have to go through all keys in the object |
+| Addition                     | O(1)       | Since we don't have to worry about the order so its constant time                                                        |
+| Removal                      | O(1)       | Since order isn't important so we can delete any key value pair in constant time provided the key                        |
+| Update                       | O(1)       | Since we can update any key value pair provided the key                                                                  |
