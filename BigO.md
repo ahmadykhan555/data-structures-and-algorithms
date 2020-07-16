@@ -1,5 +1,7 @@
 # BIG O Analysis
 
+In computer science being able to write a solution for an interesting problem is one of the preliminary steps towards becoming an excellent computer scientist. The robustness of a solution that can handle and cover a vast range of cases is one feat of engineering but how do we measure if one solution is more performant as opposed to another solution. In computer science the efficiency of an algorithm is often analyzed in the amount of time & steps the algorithm takes to reach a certain result.
+
 ### Some basic rules to simplify the BigO notations
 
 1. Ignore constants O(2n) = O(n)
