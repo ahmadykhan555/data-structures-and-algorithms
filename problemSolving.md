@@ -30,8 +30,37 @@
 
 ### Explore concrete examples
 
+- This step is simply a continuation of understanding the problem, once you've grasped the crux of the problem now back you understand up with concrete examples
+- By examples it simply means to figure out sample input and output with your solution behaving as a black box
+- Start off with simpler examples like `2 + 4 = 6` and move on to handling more complex cases
+- This will also help in coming up with a basic road map of what the solution should look and behave like
+- Don't forget to unit test your solution, this helps make the solution more robust and allows for edge case handling
+- A good programmer always thinks ahead of time and tests the solution with edge cases and unexpected inputs!
+
 ### Break it down
+
+- Try to break the bigger problem in to small pieces and address each piece one at a time
+- Understand what parts of the problem are easier to address and prioritize on the complex parts
+- Once a basic solution is in place revisit the tricky parts and incorporate those into the solution
+- Many a times breaking and addressing smaller chunks will give you an insight of how to approach the more complex pieces
+- Divide and conquer!
 
 ### Solve/simplify
 
+- Now we get to the actual coding part, start writing some code down with what you've understood in the steps above
+- Start off small and build on top
+- Write a basic code, doesn't have to be super efficient and clean just yet
+- The idea here is to make sure the solution works
+- Address simpler parts and incorporate complex parts as you go
+- Unit test!
+
 ### Refactor/Improve
+
+- With a basic solution in place, always spare some time to improve it.
+- Make the solution readable from the get-go (make it a habit to write clean code)
+- Analyze the performance of you solution and see if you can improve the time and space complexity. [BIG O Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/BigO.md)
+- To be a better programmer always reflect on your solution and try to leave it in the best possible shape (as much as you can)
+- Ensure the solution is robust and doesn't have leakages or loopholes. A well tested code always pays off in the longer run
+- Remove the technical debt as much as possible, this is what differentiate a good programmer from an average one!
+
+# Problem Solving Patterns
