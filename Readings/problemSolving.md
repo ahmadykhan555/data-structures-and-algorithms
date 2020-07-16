@@ -71,7 +71,35 @@ There is no silver bullet or one size fits all approach when it comes to solving
 
 ### Frequency Counter Approach
 
-They way this approach works is that we make use of objects and somehow manipulate them to figure out patterns between a number of inputs and use this methodology (fine tune it) to solve the problem at hand
+They way this approach works is that we make use of objects and somehow manipulate them to figure out patterns between a number of inputs and use this methodology (fine tune it) to solve the problem at hand.
+
+Lets see how we can apply this approach to solve a common `Anagram` problem
+
+```javascript
+const isAnagram = (str1 = "", str2 = "") => {
+  const frequency1 = {};
+  const frequency2 = {};
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
+  for (let char of str1) {
+    frequency1[char] = ++frequency1[char] || 1;
+  }
+  for (let char of str2) {
+    frequency2[char] = ++frequency2[char] || 1;
+  }
+  for (let char of str1) {
+    if (frequency1[char] !== frequency2[char]) {
+      return false;
+    }
+  }
+  return true;
+};
+```
 
 ### Multiple Pointers Approach
 
