@@ -71,6 +71,8 @@ There is no silver bullet or one size fits all approach when it comes to solving
 
 ### Frequency Counter Approach
 
+They way this approach works is that we make use of objects and somehow manipulate them to figure out patterns between a number of inputs and use this methodology (fine tune it) to solve the problem at hand
+
 ### Multiple Pointers Approach
 
 ### Sliding window Approach
