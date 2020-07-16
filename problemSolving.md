@@ -69,4 +69,10 @@ Diving into coding the moment we lay our eyes on a problem statement can be very
 
 There is no silver bullet or one size fits all approach when it comes to solving programming problems. There are however ways/patterns that we can use to gain a better insight of the problem and address in a better way. These patterns don't always fit the problem a 100% but they do allow a programmer to become more mindful and sharp to address unseen, novice problems.
 
-### Frequency Counter
+### Frequency Counter Approach
+
+### Multiple Pointers Approach
+
+### Sliding window Approach
+
+### Divide and Conquer Approach
