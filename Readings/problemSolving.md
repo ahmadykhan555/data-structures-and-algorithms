@@ -60,7 +60,7 @@ Diving into coding the moment we lay our eyes on a problem statement can be very
 
 - With a basic solution in place, always spare some time to improve it.
 - Make the solution readable from the get-go (make it a habit to write clean code)
-- Analyze the performance of you solution and see if you can improve the time and space complexity. [BIG O Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/BigO.md)
+- Analyze the performance of you solution and see if you can improve the time and space complexity. [BIG O Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/BigO.md)
 - To be a better programmer always reflect on your solution and try to leave it in the best possible shape (as much as you can)
 - Ensure the solution is robust and doesn't have leakages or loopholes. A well tested code always pays off in the longer run
 - Remove the technical debt as much as possible, this is what differentiate a good programmer from an average one!
