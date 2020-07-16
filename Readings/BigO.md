@@ -66,7 +66,7 @@ the newArray variable grows to infinity if the input size reaches infinity which
 - Unordered data (order doesn't matter)
 - Very fast in most cases O(1)
 
-[Code reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/objectMethods.ts)
+[Code reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/objectMethods.ts)
 
 | Method                       | Complexity | Reason                                                                                                                   |
 | ---------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -85,7 +85,7 @@ the newArray variable grows to infinity if the input size reaches infinity which
 - Used where need order
 - Anything that may require array re-indexing will result in at least linear time complexity ie O(n)
 
-[Code reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/arrayMethods.ts)
+[Code reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/arrayMethods.ts)
 
 | Method     | usage                                                                                                              | Complexity   | Reason                                                           |
 | ---------- | ------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------------------------------------------------------- |
