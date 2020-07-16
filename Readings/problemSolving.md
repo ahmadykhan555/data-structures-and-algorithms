@@ -73,7 +73,7 @@ There is no silver bullet or one size fits all approach when it comes to solving
 
 They way this approach works is that we make use of objects and somehow manipulate them to figure out patterns between a number of inputs and use this methodology (fine tune it) to solve the problem at hand.
 
-Lets see how we can apply this approach to solve a common `Anagram` problem
+Lets see how we can apply this approach to solve a common `Anagram` problem [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/frequencyCounter.ts)
 
 ```javascript
 const isAnagram = (str1 = "", str2 = "") => {
