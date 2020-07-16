@@ -1,5 +1,7 @@
 # Problem Solving Techniques and Patterns
 
+Diving into coding the moment we lay our eyes on a problem statement can be very tempting at times but one can run into a dead end if one dives in without giving a considerable thought to what he is looking to solve. This chapter touches upon this problem that many programmer often find themselves stumbling across.
+
 ### Understand the problem
 
 - Step 1: Understand the problem
