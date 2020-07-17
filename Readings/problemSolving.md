@@ -109,7 +109,7 @@ Uses the idea of having some kind of pointers pointing to some index values (to 
 
 #### Sum pairs
 
-Lets use this approach to find the first pair in an array that gives us a sum of 0, otherwise returns `undefined`
+Lets use this approach to find the first pair in an array that gives us a sum of 0, otherwise returns `undefined` [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/sumPairs.ts)
 
 ```javascript
 const findSumPairs = arr => {
