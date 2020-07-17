@@ -49,6 +49,33 @@ const nestedLoopSol = arr => {
   return undefined;
 };
 
+const countUniqueValues = arr => {
+  arr.sort((a, b) => a - b);
+  /**
+   * Make sure array is sorted
+   * incase arr.length < 2 the number of unique values = length
+   * pointer i sits at index 0 & pointer j sits at index i+1
+   * start with the value at index i and compare it to the value at j and set counter = 1
+   * if value[i] === value[j] do nothing
+   * if value[i] != value[j] add one to the counter
+   * set i = j and move j one place ahead
+   * reach end of the array and return the count
+   */
+  let i = 0;
+  let j = i + 1;
+  if (arr.length < 2) {
+    return arr.length;
+  }
+  let counter = 1;
+  while (j <= arr.length - 1 && i < j) {
+    if (arr[i] !== arr[j]) {
+      ++counter;
+    }
+    i = j;
+    ++j;
+  }
+  return counter;
+};
 (() => {
   const { performance } = require("perf_hooks");
   const testArr1 = [
@@ -86,4 +113,6 @@ const nestedLoopSol = arr => {
   console.log(`O(n^2) result: ${nestedLoopSol(testArr1)}`);
   let t4 = performance.now();
   console.log(`elapsed time: ${t4 - t3}`);
+  console.log(countUniqueValues([1, 1, 1, 1, 2]));
+  console.log(countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 5, 6, 7, 7, 8]));
 })();
