@@ -109,7 +109,7 @@ Uses the idea of having some kind of pointers pointing to some index values (to 
 
 #### Sum pairs
 
-Lets use this approach to find the first pair in an array that gives us a sum of 0, otherwise returns `undefined` [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/2bfc6d64d2879563f89e0db030af47f3d1782988/Code/sumPairs.ts#L2-L37)
+Lets use this approach to find the first pair in an array that gives us a sum of 0, otherwise returns `undefined` [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/multiplePointers.ts#L2-L37)
 
 ```javascript
 const findSumPairs = arr => {
@@ -134,6 +134,8 @@ const findSumPairs = arr => {
   return undefined;
 };
 ```
+
+[Example to count unique values in an array](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/ca0a0ed11864dd51edecaa30c6c98d5928dee008/Code/multiplePointers.ts#L52-L78)
 
 ### Sliding window Approach
 
