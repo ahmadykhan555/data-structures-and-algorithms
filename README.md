@@ -6,11 +6,9 @@ In computer science being able to write a solution for an interesting problem is
 
 ### Chapter Two: Problem Solving Techniques & Patterns
 
-Diving into coding the moment we lay our eyes on a problem statement can be very tempting at times but one can run into a dead end if one dives in without giving a considerable thought to what he is looking to solve. This chapter touches upon this problem that many programmer often find themselves stumbling across. Following patterns are discussed in this chapter:
+Diving into coding the moment we lay our eyes on a problem statement can be very tempting at times but one can run into a dead end if one dives in without giving a considerable thought to what he is looking to solve. This chapter touches upon this problem that many programmer often find themselves stumbling across. Following [patterns](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/problemSolving.md#problem-solving-patterns) are discussed in this chapter. [Read more](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/problemSolving.md)
 
 - Frequency Counter
 - Multiple Pointers
 - Sliding Window
 - Divide & Conquer
-
-[Read more](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/problemSolving.md)
