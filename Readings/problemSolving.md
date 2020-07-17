@@ -73,7 +73,7 @@ There is no silver bullet or one size fits all approach when it comes to solving
 
 They way this approach works is that we make use of objects and somehow manipulate them to figure out patterns between a number of inputs and use this methodology (fine tune it) to solve the problem at hand.
 
-##### Anagram:
+#### Anagram:
 
 Lets see how we can apply this approach to solve a common `Anagram` problem [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/frequencyCounter.ts)
 
@@ -104,6 +104,36 @@ const isAnagram = (str1 = "", str2 = "") => {
 ```
 
 ### Multiple Pointers Approach
+
+Uses the idea of having some kind of pointers pointing to some index values (to be tailored for each case) and somehow using them to reach a solution. The reason why this approach is very popular in problem solving is that it has drastically improve the time complexity of an algorithm and has very little space complexity. Mostly used when we need to compare some arrays or when we need to find pairs satisfying a certain condition within the same array.
+
+#### Sum pairs
+
+Lets use this approach to find the first pair in an array that gives us a sum of 0, otherwise returns `undefined`
+
+```javascript
+const findSumPairs = arr => {
+  arr.sort((a, b) => a - b);
+  let i = 0;
+  let j = arr.length - 1;
+  for (i; i < arr.length; ) {
+    if (!(j > i)) {
+      return undefined;
+    }
+    let sum = arr[i] + arr[j];
+    if (sum === 0) {
+      return [arr[i], arr[j]];
+    } else if (sum > 0) {
+      --j;
+    } else if (sum < 0) {
+      i++;
+    } else {
+      i++;
+    }
+  }
+  return undefined;
+};
+```
 
 ### Sliding window Approach
 
