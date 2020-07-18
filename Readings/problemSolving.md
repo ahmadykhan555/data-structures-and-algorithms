@@ -135,7 +135,28 @@ const findSumPairs = arr => {
 };
 ```
 
-[Example to count unique values in an array](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/ca0a0ed11864dd51edecaa30c6c98d5928dee008/Code/multiplePointers.ts#L52-L78)
+#### Unique Value Counter Problem
+
+```typescript
+const uniqueValuesCounter = (arr: number[]): number => {
+  let i = 0;
+  let j = i + 1;
+  if (arr.length < 2) {
+    return arr.length;
+  }
+  let counter = 1;
+  while (j <= arr.length - 1 && i < j) {
+    if (arr[i] !== arr[j]) {
+      ++counter;
+    }
+    i = j;
+    ++j;
+  }
+  return counter;
+};
+```
+
+[Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/ca0a0ed11864dd51edecaa30c6c98d5928dee008/Code/multiplePointers.ts#L52-L78)
 
 ### Sliding window Approach
 
