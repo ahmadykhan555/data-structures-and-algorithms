@@ -12,3 +12,7 @@ Diving into coding the moment we lay our eyes on a problem statement can be very
 - Multiple Pointers
 - Sliding Window
 - Divide & Conquer
+
+### Chapter Three: Recursion
+
+Recursion is an alternative of an iterative (looping) approach. This is a slightly confusing topic at first but once we get the hang of it, its really simple and efficient to use. Recursion is a pattern where a function calls itself (as opposed to some other function) until it gets to a solution. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/recursion.md)
