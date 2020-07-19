@@ -9,7 +9,7 @@ There are only two things that a recursive function must have
 
 #### Count Down example:
 
-Lets use recursion to countdown [Code Reference]()
+Lets use recursion to countdown [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/b06880b0f256dafa0f558614fcb4b4f60f7d1488/Code/recursion.ts#L1-L10)
 
 ```javascript
 const countDown = num => {
@@ -26,7 +26,7 @@ const countDown = num => {
 
 #### Factorial Example:
 
-Another common use-case of recursion is to compute factorial [Code Reference]()
+Another common use-case of recursion is to compute factorial [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/b06880b0f256dafa0f558614fcb4b4f60f7d1488/Code/recursion.ts#L12-L19)
 
 ```javascript
 const calcFactorial = num => {
