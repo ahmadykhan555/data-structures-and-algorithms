@@ -160,4 +160,35 @@ const uniqueValuesCounter = (arr: number[]): number => {
 
 ### Sliding window Approach
 
+Useful when dealing with a problem that involves some kind of subset of the original data and we need to figure out something in that manner.
+Lets take a look at an example
+
+#### Find Max Sum
+
+We make use of the sliding window pattern to find max sum of consecutive numbers in an unsorted array. This patterns helps us solve an otherwise O(n^2) problem in O(n) [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Code/slidingWindow.ts)
+
+```javascript
+const maxSum = (arr, window) => {
+  if (!arr.length || (arr.length && arr.length < window)) {
+    return null;
+  }
+  if (window === 1) {
+    let temp = [...arr].sort((a, b) => a - b);
+    return temp[temp.length - 1];
+  }
+
+  let maxSum = 0;
+  for (let i = 0; i < window; i++) {
+    maxSum += arr[i];
+  }
+  for (let i = 1; i <= arr.length - window; i++) {
+    let temp = maxSum - arr[i - 1] + arr[window + i - 1];
+    if (temp >= maxSum) {
+      maxSum = temp;
+    }
+  }
+  return maxSum;
+};
+```
+
 ### Divide and Conquer Approach
