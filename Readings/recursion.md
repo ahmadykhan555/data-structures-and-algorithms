@@ -38,3 +38,7 @@ const calcFactorial = num => {
   return num * calcFactorial(--num);
 };
 ```
+
+### Common Pitfalls:
+
+Recursion is a tricky topic to master, even experience developers sometimes struggle with it. One of the most common reasons a recursive function may spiral out of control is if the algorithm is not designed properly. In the introductory paragraph we looked at the two must have pieces in a recursive function and missing either of those can lead to stack overflow. Since recursion like any other chain of functions pushing things on to the call-stack, if a base condition or a function is called with the same input, it keeps getting pushed on the stack until the max limit is reached. So make sure to have a solid base condition that is logically correct along with a correct recursive call!
