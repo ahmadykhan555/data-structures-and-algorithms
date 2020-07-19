@@ -192,3 +192,12 @@ const maxSum = (arr, window) => {
 ```
 
 ### Divide and Conquer Approach
+
+Uses a pattern where we divide the given input data in small chunks to somehow reach a solution. This pattern can help improve time complexity significantly. For instance searching a value in a sorted array can be done in O(n) time; loop the entire array until the value is found, however since the array is sorted we can use a divide and conquer approach.
+
+#### Searching a value in a sorted list
+
+Lets use this pattern to see how we can optimise a searching algorithm to find a value in O(log n) complexity as opposed to the naive O(n) solution
+
+```javascript
+```
