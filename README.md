@@ -19,7 +19,7 @@ Recursion is an alternative of an iterative (looping) approach. This is a slight
 
 ### Chapter Four: Searching Algorithms
 
-In this chapter we take a look at how searching algorithms are defined and implemented. We will take a look at the naive brute-force approach first and progressively dive into the more efficient performant ways of searching.
+In this chapter we take a look at how searching algorithms are defined and implemented. We will take a look at the naive brute-force approach first and progressively dive into the more efficient performant ways of searching. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/commit/3821862315a27d399d50ccdd6bc3a9c088057258)
 
 #### Algorithms:
 
