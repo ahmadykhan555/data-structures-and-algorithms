@@ -16,3 +16,14 @@ Diving into coding the moment we lay our eyes on a problem statement can be very
 ### Chapter Three: Recursion
 
 Recursion is an alternative of an iterative (looping) approach. This is a slightly confusing topic at first but once we get the hang of it, its really simple and efficient to use. Recursion is a pattern where a function calls itself (as opposed to some other function) until it gets to a solution. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/recursion.md)
+
+### Chapter Four: Searching Algorithms
+
+In this chapter we take a look at how searching algorithms are defined and implemented. We will take a look at the naive brute-force approach first and progressively dive into the more efficient performant ways of searching.
+
+#### Algorithms:
+
+- Linear Search in an Array
+- Binary Search in a sorted array
+- String searching algorithm
+- KMP string searching algorithm
