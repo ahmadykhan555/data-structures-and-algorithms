@@ -42,3 +42,25 @@ const calcFactorial = num => {
 ### Common Pitfalls:
 
 Recursion is a tricky topic to master, even experience developers sometimes struggle with it. One of the most common reasons a recursive function may spiral out of control is if the algorithm is not designed properly. In the introductory paragraph we looked at the two must have pieces in a recursive function and missing either of those can lead to stack overflow. Since recursion like any other chain of functions pushing things on to the call-stack, if a base condition or a function is called with the same input, it keeps getting pushed on the stack until the max limit is reached. So make sure to have a solid base condition that is logically correct along with a correct recursive call!
+
+### Helper Method Recursion
+
+Recursion doesn't necessarily need to happen in its own scope, we can have recursive methods like any other closures. The way we do this is we have a wrapping non-recursive method outside which houses a helper which in turn is a recursive function.
+
+```javascript
+const collectOddValues = arr => {
+  const oddValues = [];
+
+  const filterOdd = subset => {
+    if (subset.length === 0) {
+      return;
+    }
+    if (subset[0] % 2 !== 0) {
+      console.log(subset[0]);
+      oddValues.push(subset[0]);
+    }
+    filterOdd(subset.slice(1));
+  };
+  return filterOdd(arr);
+};
+```
