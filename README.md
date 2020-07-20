@@ -23,7 +23,7 @@ In this chapter we take a look at how searching algorithms are defined and imple
 
 #### Algorithms:
 
-- Linear Search in an Array
+- Linear Search in an Array [Detail](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/searching.md#linear-search)
 - Binary Search in a sorted array
 - String searching algorithm
 - KMP string searching algorithm
