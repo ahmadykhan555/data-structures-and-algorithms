@@ -44,42 +44,44 @@ const bubbleSortOptimized = arr => {
   return arr;
 };
 
-const merge = (arr1, arr2) => {
+const merge = (arr1 = [], arr2 = []) => {
+  /**
+   * pointers for each array to see if the whole array is parsed
+   * compare each index to the other array and push to the new array in correct order
+   * once an array is fully parsed break the loop and copy contents if any of the other array into the final array
+   * edge case: handle repetitions
+   */
   let i = 0;
   let j = 0;
-  const newArray = [];
-  while (i < arr1.length - 1 && j < arr2.length - 1) {
+  const sortedArray = [];
+  while (i < arr1.length && j < arr2.length) {
     if (arr1[i] < arr2[j]) {
-      console.log(`Pushing i ${arr1[i]}`);
-      newArray.push(arr1[i]);
+      sortedArray.push(arr1[i]);
       i++;
     } else if (arr2[j] < arr1[i]) {
-      console.log(`Pushing j ${arr2[j]}`);
-      newArray.push(arr2[j]);
+      sortedArray.push(arr2[j]);
       j++;
-    } else if (arr1[i] === arr2[j]) {
-      console.log(`Pushing = ${arr2[j]}`);
-      newArray.push(arr1[i]);
-      newArray.push(arr1[i]);
+    } else if (arr1[i] && arr2[i] && arr1[i] !== 0) {
+      sortedArray.push(arr1[i]);
       i++;
+      sortedArray.push(arr2[j]);
       j++;
     }
   }
 
-  while (i < arr1.length - 1) {
-    newArray.push(arr1[i]);
+  while (i < arr1.length) {
+    sortedArray.push(arr1[i]);
     i++;
   }
-  while (j < arr2.length - 1) {
-    newArray.push(arr2[j]);
+  while (j < arr2.length) {
+    sortedArray.push(arr2[j]);
     j++;
   }
-
-  return newArray;
+  return sortedArray;
 };
 
 (() => {
-  // console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
-  // console.log(bubbleSortOptimized([8, 1, 2, 3, 4, 5, 6, 7]));
-  console.log(merge([1, 3, 4, 5, 7], [2, 4, 5, 6, 7]));
+  const arr1 = [1, 3, 2, 5];
+  const arr2 = [1, 3, 2];
+  console.log(merge(arr1, arr2));
 })();
