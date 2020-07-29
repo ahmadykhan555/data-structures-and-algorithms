@@ -50,3 +50,13 @@ Detail to be added shortly
 ### Intermediate Sorting Algorithms
 
 Slightly more challenging but significantly faster however less intuitive at first to understand and the logic gets slightly more complex. That said these algorithms are better than the Basic ones and have a time complexity better that O(n^2)
+
+#### Merge Sort:
+
+The idea behind merge sort is that an array with 0 or 1 element is a sorted array. So we take an array and follow three basic steps
+
+1. Splitting the array into halves until a sorted array (0 or 1 element) is achieved.
+2. Sort two arrays: This involves sorting the elements of two already sorted arrays (Much easier as compared to two unsorted arrays)
+3. Merging them back to reach the final sorted array with all elements are the original array but in correct sort order
+
+Thus to design the merge sort algorithm we need to break it down into two smaller tasks (Divide and Conquer) namely i. a splitter function ii. a sort + merger function
