@@ -44,7 +44,42 @@ const bubbleSortOptimized = arr => {
   return arr;
 };
 
+const merge = (arr1, arr2) => {
+  let i = 0;
+  let j = 0;
+  const newArray = [];
+  while (i < arr1.length - 1 && j < arr2.length - 1) {
+    if (arr1[i] < arr2[j]) {
+      console.log(`Pushing i ${arr1[i]}`);
+      newArray.push(arr1[i]);
+      i++;
+    } else if (arr2[j] < arr1[i]) {
+      console.log(`Pushing j ${arr2[j]}`);
+      newArray.push(arr2[j]);
+      j++;
+    } else if (arr1[i] === arr2[j]) {
+      console.log(`Pushing = ${arr2[j]}`);
+      newArray.push(arr1[i]);
+      newArray.push(arr1[i]);
+      i++;
+      j++;
+    }
+  }
+
+  while (i < arr1.length - 1) {
+    newArray.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length - 1) {
+    newArray.push(arr2[j]);
+    j++;
+  }
+
+  return newArray;
+};
+
 (() => {
-  console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
-  console.log(bubbleSortOptimized([8, 1, 2, 3, 4, 5, 6, 7]));
+  // console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
+  // console.log(bubbleSortOptimized([8, 1, 2, 3, 4, 5, 6, 7]));
+  console.log(merge([1, 3, 4, 5, 7], [2, 4, 5, 6, 7]));
 })();

@@ -2,9 +2,13 @@
 
 Sorting is simply reordering the data in some shape according to some condition. We may a list to be sorted in ascending order/decending order or some custom order. This is a great problem to put one's algorithm design skills to the test. It is an interesting place to sharpen your problem solving skills as well. In this section we will take a look at how to construct a sorting algorithm and step by step optimize it for best performance.
 
-### Algorithms:
+## Algorithms:
 
 There are a ton of algorithms for sorting out there, each has its own use-case and conditions when it outperforms others. In this chapter we will take a look at the implementation and time complexity analysis of several popular algorithms and discuss why one may outperform the other
+
+### Basic Sorting Algorithms
+
+Poor performance but easy to understand and essential for more advanced algorithm designs as we move forward. Time Complexity: O(n^2) :o
 
 #### Bubble Sort:
 
@@ -34,3 +38,11 @@ const bubbleSortOptimized = arr => {
   return arr;
 };
 ```
+
+#### Selection Sort
+
+#### Insertion Sort
+
+### Intermediate Sorting Algorithms
+
+Slightly more challenging but significantly faster however less intuitive at first to understand and the logic gets slightly more complex. That said these algorithms are better than the Basic ones and have a time complexity better that O(n^2)
