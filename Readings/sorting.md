@@ -41,7 +41,11 @@ const bubbleSortOptimized = arr => {
 
 #### Selection Sort
 
+Detail to be added shortly
+
 #### Insertion Sort
+
+Detail to be added shortly
 
 ### Intermediate Sorting Algorithms
 
