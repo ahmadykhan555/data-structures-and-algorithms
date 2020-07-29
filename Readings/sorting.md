@@ -60,3 +60,43 @@ The idea behind merge sort is that an array with 0 or 1 element is a sorted arra
 3. Merging them back to reach the final sorted array with all elements are the original array but in correct sort order
 
 Thus to design the merge sort algorithm we need to break it down into two smaller tasks (Divide and Conquer) namely i. a splitter function ii. a sort + merger function
+
+##### The merger:
+
+```typescript
+const merge = (arr1 = [], arr2 = []) => {
+  /**
+   * pointers for each array to see if the whole array is parsed
+   * compare each index to the other array and push to the new array in correct order
+   * once an array is fully parsed break the loop and copy contents if any of the other array into the final array
+   * edge case: handle repetitions
+   */
+  let i = 0;
+  let j = 0;
+  const sortedArray = [];
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      sortedArray.push(arr1[i]);
+      i++;
+    } else if (arr2[j] < arr1[i]) {
+      sortedArray.push(arr2[j]);
+      j++;
+    } else if (arr1[i] && arr2[i] && arr1[i] !== 0) {
+      sortedArray.push(arr1[i]);
+      i++;
+      sortedArray.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    sortedArray.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    sortedArray.push(arr2[j]);
+    j++;
+  }
+  return sortedArray;
+};
+```
