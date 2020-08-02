@@ -100,3 +100,21 @@ const merge = (arr1 = [], arr2 = []) => {
   return sortedArray;
 };
 ```
+
+#### Merge Sort Implementation:
+
+```typescript
+const mergeSort = (arr = []) => {
+  /**
+   * repeatedly split array till merged arrays of elements 0 or 1 is reached.
+   * use merger helper to merge the splitted array
+   * resulting in sorted array
+   */
+  if (arr.length <= 1) return arr;
+
+  const middle = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, middle));
+  const right = mergeSort(arr.slice(middle));
+  return merge(left, right);
+};
+```
