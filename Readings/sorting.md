@@ -59,7 +59,7 @@ The idea behind merge sort is that an array with 0 or 1 element is a sorted arra
 2. Sort two arrays: This involves sorting the elements of two already sorted arrays (Much easier as compared to two unsorted arrays)
 3. Merging them back to reach the final sorted array with all elements are the original array but in correct sort order
 
-Thus to design the merge sort algorithm we need to break it down into two smaller tasks (Divide and Conquer) namely i. a splitter function ii. a sort + merger function
+Thus to design the merge sort algorithm we need to break it down into two smaller tasks (Divide and Conquer) namely i. a splitter function ii. a sort + merger function [Code Reference](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/4713d908c832cabb335677a5fe71403e11ad507d/Code/sorting.ts#L83-L95)
 
 ##### The merger:
 
