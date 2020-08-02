@@ -80,8 +80,25 @@ const merge = (arr1 = [], arr2 = []) => {
   return sortedArray;
 };
 
+const mergeSort = (arr = []) => {
+  /**
+   * repeatedly split array till merged arrays of elements 0 or 1 is reached.
+   * use merger helper to merge the splitted array
+   * resulting in sorted array
+   */
+  if (arr.length <= 1) return arr;
+
+  const middle = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, middle));
+  const right = mergeSort(arr.slice(middle));
+  return merge(left, right);
+};
+
 (() => {
-  const arr1 = [1, 3, 2, 5];
-  const arr2 = [1, 3, 2];
-  console.log(merge(arr1, arr2));
+  const testArr1 = [3, 2, 1, 10, 9, 8];
+  const testArr2 = [11, 7, 2, 3, 1, 0, 8, 9, 90];
+  const testArr3 = [0, 1, 3, 4, 2, 6, 5, 9, 8, 12, 1];
+  console.log(mergeSort(testArr1));
+  console.log(mergeSort(testArr2));
+  console.log(mergeSort(testArr3));
 })();
