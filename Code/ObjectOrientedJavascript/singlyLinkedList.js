@@ -139,13 +139,30 @@ class SinglyLinkedList {
     }
     this.length++;
   }
+
+  remove(index) {
+    if (index === 0) {
+      return this.shift();
+    }
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+    if (index > this.length - 1) {
+      return false;
+    }
+    const prev = this.get(index - 1);
+    const current = prev.next;
+    prev.next = current.next;
+    current.next = null;
+    this.length--;
+  }
 }
 
 (() => {
   const list = new SinglyLinkedList();
   SinglyLinkedList.populateList(list, 10);
   list.traverse();
-  console.log("Inserted");
-  list.insert("inserted", 11);
+  console.log("removing index 5");
+  list.remove(5);
   list.traverse();
 })();
