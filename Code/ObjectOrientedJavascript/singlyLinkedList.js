@@ -9,7 +9,7 @@
  */
 
 class Node {
-  constructor(val, next) {
+  constructor(val) {
     this.val = val;
     this.next = null;
   }
@@ -20,6 +20,12 @@ class SinglyLinkedList {
     this.length = 0;
     this.head = null;
     this.tail = null;
+  }
+
+  static populateList(list, count) {
+    for (let i = 0; i < count; i++) {
+      list.push(Math.ceil(1000 * Math.random() + 1));
+    }
   }
 
   push(val) {
@@ -35,10 +41,12 @@ class SinglyLinkedList {
   }
 
   traverse() {
+    let count = 0;
     let current = this.head;
     while (current) {
-      console.log(current.val);
+      console.log(count, ", ", current.val);
       current = current.next;
+      count++;
     }
   }
 
@@ -83,22 +91,61 @@ class SinglyLinkedList {
 
   unshift(val) {
     //adds something at the head
+
     const newNode = new Node(val);
-    newNode.next = this.head;
-    this.head = newNode;
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+  }
+
+  get(index) {
+    if (index > this.length - 1 || index < 0) {
+      return null;
+    }
+    let val;
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      current = current.next;
+    }
+    return current;
+  }
+
+  set(val, index) {
+    const node = this.get(index);
+    if (node) {
+      node.val = val;
+    }
+  }
+
+  insert(val, index) {
+    //   inserts new node at the specified index
+    if (index > this.length) {
+      return false;
+    } else if (this.length === index) {
+      this.push(val);
+    } else if (index === 0) {
+      this.unshift(val);
+    } else {
+      const prev = this.get(index - 1);
+      const current = prev.next;
+      const newNode = new Node(val);
+      newNode.next = current;
+      prev.next = newNode;
+    }
+    this.length++;
   }
 }
 
 (() => {
   const list = new SinglyLinkedList();
-  list.push("hi");
-  list.push("hello");
-  list.push("wassup");
-  list.push("YO!!");
-
-  list.unshift(10);
+  SinglyLinkedList.populateList(list, 10);
   list.traverse();
-  console.log("unshift again");
-  list.unshift("AYK");
+  console.log("Inserted");
+  list.insert("inserted", 11);
   list.traverse();
 })();
