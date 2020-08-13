@@ -156,13 +156,31 @@ class SinglyLinkedList {
     current.next = null;
     this.length--;
   }
+
+  reverse() {
+    // swap head and tail
+    let currentNode = this.head;
+    this.head = this.tail;
+    this.tail = currentNode;
+
+    // previous node and next node
+    let prevNode = null;
+    let nextNode = prevNode;
+
+    for (let i = 0; i < this.length; i++) {
+      nextNode = currentNode.next;
+      currentNode.next = prevNode;
+      prevNode = currentNode;
+      currentNode = nextNode;
+    }
+  }
 }
 
 (() => {
   const list = new SinglyLinkedList();
   SinglyLinkedList.populateList(list, 10);
   list.traverse();
-  console.log("removing index 5");
-  list.remove(5);
+  list.reverse();
+  console.log("****************");
   list.traverse();
 })();
