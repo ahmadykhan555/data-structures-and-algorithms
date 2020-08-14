@@ -31,3 +31,11 @@ In this chapter we take a look at how searching algorithms are defined and imple
 ### Chapter Five: Sorting Algorithms
 
 Sorting is simply reordering the data in some shape according to some condition. We may a list to be sorted in ascending order/decending order or some custom order. This is a great problem to put one's algorithm design skills to the test. It is an interesting place to sharpen your problem solving skills as well. In this section we will take a look at how to construct a sorting algorithm and step by step optimize it for best performance. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/sorting.md)
+
+### Chapter Six: Data Structures
+
+In this section we explore advanced data structure that we don't get out of the box with Javascript. These require advanced understanding of things and are great ways of getting better at designing better algorithms.
+
+#### Linked Lists
+
+Array like structures but non-indexed. Efficient at a few things while a bit slow at the other. In this sub-section we explore how to create and interact with Linked List. Linked Lists are important to learn as they are the foundations of advanced/complex data structures like Queues and Stacks. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/linkdedList.md)
