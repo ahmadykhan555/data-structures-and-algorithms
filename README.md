@@ -36,6 +36,6 @@ Sorting is simply reordering the data in some shape according to some condition.
 
 In this section we explore advanced data structure that we don't get out of the box with Javascript. These require advanced understanding of things and are great ways of getting better at designing better algorithms.
 
-#### Linked Lists
+#### 6.1 Linked Lists
 
 Array like structures but non-indexed. Efficient at a few things while a bit slow at the other. In this sub-section we explore how to create and interact with Linked List. Linked Lists are important to learn as they are the foundations of advanced/complex data structures like Queues and Stacks. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/linkedList.md)
