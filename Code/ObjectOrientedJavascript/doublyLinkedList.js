@@ -162,9 +162,27 @@ class DoublyLinkedList {
   }
 
   remove(index) {
-    if (index < 0 || index > length - 1) {
+    if (index < 0 || index >= length) {
       return null;
     }
+    if (index === 0) {
+      return this.shift();
+    }
+
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+
+    const nodeToRemove = this.get(index);
+    const prev = nodeToRemove.prev;
+    const next = nodeToRemove.next;
+
+    prev.next = next;
+    next.prev = prev;
+    nodeToRemove.next = null;
+    nodeToRemove.prev = null;
+    this.length--;
+    return nodeToRemove;
   }
 
   reverse() {}
