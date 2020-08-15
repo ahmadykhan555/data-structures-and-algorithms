@@ -21,6 +21,7 @@ class DoublyLinkedList {
     this.head = null;
     this.tail = null;
     this.length = 0;
+    DoublyLinkedList.populateList(this, 10);
   }
 
   static populateList(list, count) {
@@ -189,6 +190,5 @@ class DoublyLinkedList {
 }
 
 (() => {
-  let list = new DoublyLinkedList();
-  DoublyLinkedList.populateList(list, 5);
+  // let list = new DoublyLinkedList();
 })();
