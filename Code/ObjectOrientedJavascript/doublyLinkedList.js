@@ -57,13 +57,23 @@ class DoublyLinkedList {
 
   pop() {
     //   remove from the end of a list
-    const prev = this.tail.prev;
-    const toRemove = this.tail;
-    if (prev) {
-      prev.next = null;
-      this.tail = prev;
-      this.length--;
+    if (!this.head) {
+      return null;
     }
+    const toRemove = this.tail;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      const prev = this.tail.prev;
+      if (prev) {
+        this.tail = toRemove.prev;
+        this.tail.next = null;
+        toRemove.prev = null;
+      }
+    }
+    this.length--;
     return toRemove;
   }
 
@@ -73,54 +83,74 @@ class DoublyLinkedList {
     if (!this.length) {
       return null;
     }
-    this.length--;
     if (this.length === 1) {
       this.head = null;
       this.tail = null;
-      return toRemove;
+    } else {
+      const nextNode = this.head.next;
+      nextNode.prev = null;
+      this.head.next = null;
+      this.head = nextNode;
     }
-    const nextNode = this.head.next;
-    nextNode.prev = null;
-    this.head = nextNode;
+    this.length--;
     return toRemove;
   }
 
   unshift(val) {
     //   put a value at the start of the list;
     const newNode = new Node(val);
-    this.head.prev = newNode;
-    newNode.next = this.head;
-    this.head = newNode;
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+    }
     this.length++;
     return this;
   }
 
   get(index) {
-    if (index < 0 || index > this.length) {
+    if (index < 0 || index >= this.length) {
       return null;
     }
-    let node = this.head;
-    for (let i = 0; i < this.length - 1; i++) {
-      node = node.next;
+    let useHead = index <= this.length / 2;
+    let count = useHead ? 0 : this.length - 1;
+    let current = useHead ? this.head : this.tail;
+    let factor = useHead ? 1 : -1;
+    let direction = useHead ? "next" : "prev";
+
+    while (count != index) {
+      current = current[direction];
+      count += factor;
     }
-    return node;
+
+    return current;
   }
 
   set(val, index) {
     const node = this.get(index);
-    node.val = val;
+    if (node) {
+      node.val = val;
+      return node;
+    }
+    return false;
   }
 
   insert(val, index) {
-    if (index < 0 || index > this.length - 1) {
+    if (index < 0 || index > this.length) {
       return null;
     }
+
     if (index === 0) {
       return this.unshift(val);
     }
-    if (index === this.length - 1) {
+
+    if (index === this.length) {
       return this.push(val);
     }
+
     const node = new Node(val);
     const nodeAtIndex = this.get(index);
     node.next = nodeAtIndex;
