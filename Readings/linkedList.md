@@ -17,5 +17,5 @@ Javascript class syntax is just a syntactic sugar to provide a class-like way of
 
 A singly linked list is uni-directional, ie each node points to either the next or previous note but not both.
 | Method | usage | Complexity | Detail |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------------------------------------------------------- |
-| `.push` | | O(1) | no re-indexing required |
+| ---------- | -------- | ----- | ----|
+| Push | Adds a new node to the tail | O(1) | We have a direct pointer to the tail and we just add a new node and call it the tail
