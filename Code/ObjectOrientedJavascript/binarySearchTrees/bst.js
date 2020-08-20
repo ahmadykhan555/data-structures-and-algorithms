@@ -1,3 +1,10 @@
+/**
+ * Time complexity
+ * In most cases both insertion and searching takes O(log n)
+ * In very minor cases it can be O(n) if the tress is a one sided tree.
+ * With every increase in level we have to compare only once more.
+ */
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -35,6 +42,34 @@ class Bst {
         current = current.right;
       } else {
         return this;
+      }
+    }
+  }
+
+  search(val) {
+    if (!this.root) return false;
+    let current = this.root;
+    while (true) {
+      if (val < current.val) {
+        // search left tree
+        if (!current.left) {
+          return false;
+        }
+        if (current.val === val) {
+          return true;
+        }
+        current = current.left;
+      } else if (val > current.val) {
+        // search right tree
+        if (!current.right) {
+          return false;
+        }
+        if (current.val === val) {
+          return true;
+        }
+        current = current.right;
+      } else {
+        return true;
       }
     }
   }
