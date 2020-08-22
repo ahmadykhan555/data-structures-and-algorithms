@@ -55,19 +55,19 @@ class Bst {
         if (!current.left) {
           return false;
         }
+        current = current.left;
         if (current.val === val) {
           return true;
         }
-        current = current.left;
       } else if (val > current.val) {
         // search right tree
         if (!current.right) {
           return false;
         }
+        current = current.right;
         if (current.val === val) {
           return true;
         }
-        current = current.right;
       } else {
         return true;
       }
