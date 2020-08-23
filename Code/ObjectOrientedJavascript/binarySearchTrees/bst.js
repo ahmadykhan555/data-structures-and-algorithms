@@ -89,4 +89,56 @@ class Bst {
       visited.push(node);
     }
   }
+
+  DFSPreOrder() {
+    if (!this.root) return [];
+    const visited = [];
+    function traverse(node) {
+      visited.push(node.val);
+      if (node.left) {
+        traverse(node.left);
+      }
+      if (node.right) {
+        traverse(node.right);
+      }
+    }
+    traverse(this.root);
+  }
+
+  DFSPostOrder() {
+    const visited = [];
+    function traverse(node) {
+      if (node.left) {
+        traverse(node.left);
+      }
+      if (node.right) {
+        traverse(node.right);
+      }
+      visited.push(node.val);
+    }
+    traverse(this.root);
+    return visited;
+  }
+  DFSInOrder() {
+    const visited = [];
+    function traverse(node) {
+      if (node.left) {
+        traverse(node.left);
+      }
+      visited.push(node.val);
+      if (node.right) {
+        traverse(node.right);
+      }
+    }
+    traverse(this.root);
+    return visited;
+  }
 }
+
+var bst = new Bst();
+bst.insert(10);
+bst.insert(6);
+bst.insert(15);
+bst.insert(3);
+bst.insert(8);
+bst.insert(20);
