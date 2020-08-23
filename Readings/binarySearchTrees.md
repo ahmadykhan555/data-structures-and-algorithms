@@ -4,17 +4,17 @@ A tree is an advanced data structure built on top of linked lists and specialize
 
 ### Terminology
 
-- Root
+- **Root:**
   The top most node which serves as the entry point of a tree. A tree can have only one such entry points. All nodes of the tree point away from this node.
-- Parent
+- **Parent:**
   A node which points to zero or n nodes
-- Child
+- **Child:**
   Descendants of a parent node. Usually a node that has a vertex pointing inwards is a child of some node.
-- Sibling
+- **Sibling:**
   Descendants of the same parent
-- Leaf
+- **Leaf:**
   A node that has no children
-- Vertex
+- **Vertex:**
   A line that connects parents to child. Usually the line originates from the parent and an arrow-head points to the child
 
 ### Important rules
