@@ -30,7 +30,7 @@ In this chapter we take a look at how searching algorithms are defined and imple
 
 ### Chapter Five: Sorting Algorithms
 
-Sorting is simply reordering the data in some shape according to some condition. We may a list to be sorted in ascending order/decending order or some custom order. This is a great problem to put one's algorithm design skills to the test. It is an interesting place to sharpen your problem solving skills as well. In this section we will take a look at how to construct a sorting algorithm and step by step optimize it for best performance. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/sorting.md)
+Sorting is simply reordering the data in some shape according to some condition. We may a list to be sorted in ascending order/descending order or some custom order. This is a great problem to put one's algorithm design skills to the test. It is an interesting place to sharpen your problem solving skills as well. In this section we will take a look at how to construct a sorting algorithm and step by step optimize it for best performance. [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/sorting.md)
 
 ### Chapter Six: Data Structures
 
@@ -47,3 +47,8 @@ Array like structures but non-indexed. Efficient at a few things while a bit slo
 #### 6.3 Queues
 
 [Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/linkedList.md)
+
+### Chapter Seven: Trees
+
+A tree is an advanced data structure consisting of nodes classified as parent, child sibling etc, built on top of linked lists and specializes in a variety of use-cases.
+[Read More](https://github.com/ahmadykhan555/data-structures-and-algorithms/blob/master/Readings/binarySearchTrees.md)

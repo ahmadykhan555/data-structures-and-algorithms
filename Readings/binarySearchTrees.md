@@ -1,6 +1,6 @@
 # Tree
 
-A tree is an advanced data structure built on top of linked lists and specializes in a variety of use-cases.
+A tree is an advanced data structure consisting of nodes classified as parent, child sibling etc, built on top of linked lists and specializes in a variety of use-cases.
 
 ### Terminology
 
