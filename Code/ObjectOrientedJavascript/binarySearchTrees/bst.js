@@ -73,4 +73,20 @@ class Bst {
       }
     }
   }
+
+  breadthFirstSearch() {
+    if (!this.root) return [];
+    const queue = [this.root];
+    const visited = [];
+    while (queue.length) {
+      const node = queue.shift();
+      if (node.left) {
+        queue.push(node.left);
+      }
+      if (node.right) {
+        queue.push(node.right);
+      }
+      visited.push(node);
+    }
+  }
 }
