@@ -28,17 +28,17 @@ For a data structure to qualify for a tree some important rules must be followed
 
 ### Common Real World Examples
 
-1. File system
+1. **File system:**
    In most operating systems the file systems is represented using a tree
-2. Networking
+2. **Networking:**
    Trees are heavily used in facilitating data communication over the network
-3. Artificial Intelligence
+3. **Artificial Intelligence:**
    Decision trees are key to several AI based systems and games
-4. Abstract Syntax Tree
+4. **Abstract Syntax Tree:**
    Used by most modern compilers
-5. JSON
+5. **JSON:**
    Javascript Object Notation is one fairly common example of a tree.
-6. DOM
+6. **DOM:**
    Document Object Model is another fairly common example where a webpage can be represented as a tree of nodes.
 
 # Binary Tree
